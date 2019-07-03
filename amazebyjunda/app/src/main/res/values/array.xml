@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="maze">
+        <item>
+            DFS
+        </item>
+
+        <item>
+            Prim
+        </item>
+
+        <item>
+            Eller
+        </item>
+    </string-array>
+
+    <string-array name="robot">
+        <item>
+            Manual
+        </item>
+
+        <item>
+            WallFollower
+        </item>
+
+        <item>
+            Wizard
+        </item>
+
+        <item>
+            Explorer
+        </item>
+
+        <item>
+            Pledge
+        </item>
+    </string-array>
+</resources>

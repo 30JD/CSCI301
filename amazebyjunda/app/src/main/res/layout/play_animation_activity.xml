@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/play"
+    tools:context="cs301.cs.wm.edu.jundaan.gui.PlayAnimationActivity">
+
+    <LinearLayout
+        android:id="@+id/togLinearLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart = "true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal">
+
+        <ToggleButton
+            android:id="@+id/toggleButtonmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textOn="hide map"
+            android:textOff="show map"
+            android:layout_weight="1"
+            />
+
+
+        <ToggleButton
+            android:id="@+id/toggleButtonwall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textOn="hide wall"
+            android:textOff="show wall"
+            android:layout_weight="1"
+            />
+
+        <ToggleButton
+            android:id="@+id/toggleButtonsol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textOn="hide solution"
+            android:textOff="show solution"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+
+    <ToggleButton
+        android:id="@+id/sandp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textOn = "pause"
+        android:textOff="start"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <cs301.cs.wm.edu.jundaan.falstad.MazePanel
+        android:id="@+id/mazePanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/togLinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/zoom_out"
+        android:text="-"
+        android:textSize="30dp"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/zoom_in"
+        android:text="+"
+        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/zoom_out" />
+
+    <ProgressBar
+        android:id="@+id/energyBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/energy"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/energy"
+        android:text="Energy Level"
+        android:textColor="@color/colorAccent"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@id/sandp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ToggleButton
+        android:id="@+id/musicplay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textOn="Play Music"
+        android:textOff="Pause Music"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
